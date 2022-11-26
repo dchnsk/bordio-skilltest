@@ -1,11 +1,7 @@
 import { MainPage } from './pages/MainPage';
 
 function App() {
-    return (
-        <div style={{ height: '100%' }}>
-            <MainPage />
-        </div>
-    );
+    return <MainPage />;
 }
 
 export default App;
