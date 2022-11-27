@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FlexRow } from '../../flex';
-import { NotificationButton } from '../../notifications/NotificationButton';
+import { NotificationButton } from '../../../notifications/NotificationButton';
 import { HeaderProfileButton } from './HeaderProfileButton';
 import { HeaderSearchBar } from './HeaderSearchBar';
 
