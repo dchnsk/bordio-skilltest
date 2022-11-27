@@ -10,7 +10,6 @@ const AddNewButtonStyled = styled(AppButton)`
     font-size: 14px;
     color: ${(props) => props.theme.text.light};
     display: flex;
-    cursor: pointer;
     align-items: center;
     justify-content: space-around;
     width: 120px;

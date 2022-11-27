@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FlexCol, FlexRow } from '../../common/flex';
 import { KanbanRow } from './KanbanRow';
 
-const KanbanColumnRowsBlock = styled(FlexCol)`
+const KanbanColumnBody = styled(FlexCol)`
     padding: 40px 20px;
     border-top: 1px solid ${(props) => props.theme.backgorund.dark};
     border-right: 1px solid ${(props) => props.theme.backgorund.dark};
@@ -45,10 +45,10 @@ const KanbanColumnSyled = styled(FlexCol)`
 export const KanbanColumn = ({ data }) => (
     <KanbanColumnSyled>
         <KanbanColumnHeader title={data.title} amountOfRows={data.rows.length} />
-        <KanbanColumnRowsBlock>
+        <KanbanColumnBody>
             {data.rows.map((row) => (
                 <KanbanRow isCompleted={row.isCompleted} key={row.id} data={row} />
             ))}
-        </KanbanColumnRowsBlock>
+        </KanbanColumnBody>
     </KanbanColumnSyled>
 );

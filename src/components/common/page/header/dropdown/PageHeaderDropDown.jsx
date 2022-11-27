@@ -15,7 +15,6 @@ const PageHeaderDropDownButtomStyled = styled(AppButton)`
     padding: 8px 20px;
     font-size: 14px;
     display: flex;
-    cursor: pointer;
     align-items: center;
     justify-content: space-around;
 `;

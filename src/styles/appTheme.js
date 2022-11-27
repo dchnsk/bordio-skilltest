@@ -8,6 +8,7 @@ export const AppTheme = {
     text: {
         light: '#fff',
         dark: '#222222',
+        lightGray: '#8C939F',
         inactive: '#8C939F',
     },
     active: '#0094FF',

@@ -6,6 +6,7 @@ export const ImagePaths = {
     notesIcon: 'img/icons/notes-ic.svg',
     filesIcon: 'img/icons/files-ic.svg',
     plusIcon: 'img/icons/plus-ic.svg',
+    plusGrayIcon: 'img/icons/plus-gray-ic.svg',
     arrowDownIcon: 'img/icons/arrow-down-ic.svg',
     arrowDownGrayIcon: 'img/icons/arrow-down-gray-ic.svg',
     searchIcon: 'img/icons/search-ic.svg',
