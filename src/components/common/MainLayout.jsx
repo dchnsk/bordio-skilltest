@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { SideBar } from '../sidebar';
 import { ToolsList } from '../tools/ToolsList';
-import { FlexRow } from './flex';
+import { FlexCol, FlexRow } from './flex';
+
+const PageView = styled(FlexCol)`
+    // Must be calculated dynamicaly
+    width: calc(100% - 415px);
+    transform: translateX(374px) translateZ(0px);
+`;
 
 export const MainLayout = ({ children }) => {
     const [tools, setTools] = useState([]);
@@ -20,7 +27,7 @@ export const MainLayout = ({ children }) => {
         <FlexRow minHeight="100vh">
             <SideBar />
             <ToolsList availibleTools={tools} />
-            {children}
+            <PageView>{children}</PageView>
         </FlexRow>
     );
 };

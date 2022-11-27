@@ -4,7 +4,7 @@ import { FlexCol } from '../common/flex';
 import { ToolTab } from './ToolTab';
 
 const ToolsListStyled = styled(FlexCol)`
-    position: absolute;
+    position: fixed;
     left: 219px;
     width: 154px;
     top: 0;

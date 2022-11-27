@@ -1,15 +1,9 @@
+import { workSpaceData } from '../../constants';
 import { FlexCol } from '../common/flex';
 import { SideBarNavigator } from './SideBarNavigator';
 import { SideBarWorkSpaceTab } from './SideBarWorkSpaceTab';
 
 export const SideBarBody = () => {
-    const workSpaceData = {
-        profile: {
-            name: 'Check Check',
-            img: 'https://media.istockphoto.com/id/1365310330/photo/excited-young-indian-man-winner-using-smartphone-isolated-on-yellow-background.jpg?b=1&s=170667a&w=0&k=20&c=JwrK0kALlICrfSwxI_2OEVLbrsIh7Igg4L3RijPLo7U=',
-        },
-    };
-
     const availibleSections = [
         {
             id: 0,
