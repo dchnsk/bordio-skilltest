@@ -1,5 +1,6 @@
 import { ReactSVG } from 'react-svg';
 import styled from 'styled-components';
+import { ImagePaths } from '../../../constants';
 
 const NotificationButtonStyled = styled.button`
     cursor: pointer;
@@ -7,6 +8,6 @@ const NotificationButtonStyled = styled.button`
 
 export const NotificationButton = () => (
     <NotificationButtonStyled>
-        <ReactSVG src="img/icons/notification-ic.svg" />
+        <ReactSVG src={ImagePaths.notificationIcon} />
     </NotificationButtonStyled>
 );

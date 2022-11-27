@@ -5,6 +5,7 @@ import { FlexCol } from '../../../flex';
 import { useState } from 'react';
 import { useOuterClick } from '../../../../../utils/hooks/useOuterClick';
 import { PageHeaderDropDownBody } from './PageHeaderDropDownBody';
+import { ImagePaths } from '../../../../../constants';
 
 const PageHeaderDropDownButtomStyled = styled(AppButton)`
     width: 120px;
@@ -38,7 +39,7 @@ export const PageHeaderDropDown = ({ title, elements }) => {
                 }}
             >
                 {title}
-                <ReactSVG src={'img/icons/arrow-down-gray-ic.svg'} />
+                <ReactSVG src={ImagePaths.arrowDownGrayIcon} />
             </PageHeaderDropDownButtomStyled>
             {isActive ? <PageHeaderDropDownBody elements={elements} /> : null}
         </PageHeaderDropDownStyled>

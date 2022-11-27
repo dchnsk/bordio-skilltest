@@ -2,15 +2,6 @@ import styled from 'styled-components';
 import { FlexCol } from '../common/flex';
 import { ToolTab } from './ToolTab';
 
-const ToolsListStyled = styled(FlexCol)`
-    position: fixed;
-    left: 219px;
-    width: 154px;
-    top: 0;
-    bottom: 0;
-    background-color: ${(props) => props.theme.backgorund.dark};
-`;
-
 const ToolsListHeader = styled.span`
     margin: 24px 16px;
     font-size: 18px;
@@ -19,6 +10,15 @@ const ToolsListHeader = styled.span`
 
 export const ToolsListBodyStyled = styled.ul`
     width: 138px;
+`;
+
+const ToolsListStyled = styled(FlexCol)`
+    position: fixed;
+    left: 219px;
+    width: 154px;
+    top: 0;
+    bottom: 0;
+    background-color: ${(props) => props.theme.backgorund.dark};
 `;
 
 export const ToolsList = ({ availibleTools }) => {

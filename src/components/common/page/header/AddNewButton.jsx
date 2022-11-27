@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { AppButton } from '../../input/AppButton';
 import { ReactSVG } from 'react-svg';
+import { ImagePaths } from '../../../../constants';
 
 const AddNewButtonStyled = styled(AppButton)`
     background-color: ${(props) => props.theme.active};
@@ -17,6 +18,6 @@ const AddNewButtonStyled = styled(AppButton)`
 
 export const AddNewButton = () => (
     <AddNewButtonStyled>
-        <ReactSVG src={'img/icons/plus-ic.svg'} /> Add new
+        <ReactSVG src={ImagePaths.plusIcon} /> Add new
     </AddNewButtonStyled>
 );

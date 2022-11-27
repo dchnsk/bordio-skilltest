@@ -3,6 +3,7 @@ import { ReactSVG } from 'react-svg';
 import { FlexCol, FlexRow } from '../common/flex';
 import { Flex } from '../common/flex';
 import { useState } from 'react';
+import { ImagePaths } from '../../constants';
 
 const DropDownMenuHeaderTitle = styled.span`
     color: ${(props) => props.theme.text.light};
@@ -29,7 +30,7 @@ const DropDownMenuArrowStyled = styled(Flex)`
     align-items: center;
     transform: ${(props) => (props.isActive ? 'rotate(0deg)' : 'rotate(-90deg)')};
 `;
-const ArrowIcon = () => <ReactSVG src={'img/icons/arrow-down-ic.svg'} />;
+const ArrowIcon = () => <ReactSVG src={ImagePaths.arrowDownIcon} />;
 
 const DropDownMenuHeaderArrow = ({ isActive }) => {
     return (
