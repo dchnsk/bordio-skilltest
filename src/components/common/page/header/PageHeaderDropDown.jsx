@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { AppColors } from '../../../../constants';
 import { AppButton } from '../../input/AppButton';
-import { ReactComponent as ArrowDownIcon } from '../../../../assets/icons/arrow-down-ic.svg';
+import { ReactSVG } from 'react-svg';
 
 const PageHeaderDropDownStyled = styled(AppButton)`
     background-color: ${AppColors.theme.backgorund.dark};
@@ -19,6 +19,6 @@ const PageHeaderDropDownStyled = styled(AppButton)`
 export const PageHeaderDropDown = ({ title }) => (
     <PageHeaderDropDownStyled>
         {title}
-        <ArrowDownIcon color="#8C939F" fill="#8C939F" stroke="#8C939F" />
+        <ReactSVG src={'img/icons/arrow-down-gray-ic.svg'} />
     </PageHeaderDropDownStyled>
 );

@@ -1,5 +1,5 @@
+import { ReactSVG } from 'react-svg';
 import styled from 'styled-components';
-import { ReactComponent as NotificationIcon } from '../../../assets/icons/notification-ic.svg';
 
 const NotificationButtonStyled = styled.button`
     cursor: pointer;
@@ -7,6 +7,6 @@ const NotificationButtonStyled = styled.button`
 
 export const NotificationButton = () => (
     <NotificationButtonStyled>
-        <NotificationIcon />
+        <ReactSVG src="img/icons/notification-ic.svg" />
     </NotificationButtonStyled>
 );

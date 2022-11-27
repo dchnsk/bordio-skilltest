@@ -1,10 +1,13 @@
+import { KanbanBoard } from '../components/boards';
 import { MainLayout } from '../components/common/MainLayout';
-import { PageHeader } from '../components/common/page/header/PageHeader';
+import { Page } from '../components/common/page';
 
 export const MainPage = () => {
     return (
         <MainLayout>
-            <PageHeader />
+            <Page>
+                <KanbanBoard />
+            </Page>
         </MainLayout>
     );
 };

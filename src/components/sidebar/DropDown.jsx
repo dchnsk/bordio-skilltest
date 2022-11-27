@@ -1,8 +1,9 @@
-import { FlexCol, FlexRow } from '../common/flex';
-import { ReactComponent as ArrowDownSvg } from '../../assets/icons/arrow-down-ic.svg';
 import styled from 'styled-components';
+import { ReactSVG } from 'react-svg';
+import { FlexCol, FlexRow } from '../common/flex';
 import { AppColors } from '../../constants';
 import { Flex } from '../common/flex/Flex';
+import { useState } from 'react';
 
 const DropDownMenuHeaderTitle = styled.span`
     color: ${AppColors.theme.text.light};
@@ -27,10 +28,16 @@ const DropDownMenuArrowStyled = styled(Flex)`
     height: 24px;
     justify-content: center;
     align-items: center;
+    transform: ${(props) => (props.isActive ? 'rotate(0deg)' : 'rotate(-90deg)')};
 `;
+const ArrowIcon = () => <ReactSVG src={'img/icons/arrow-down-ic.svg'} />;
 
 const DropDownMenuHeaderArrow = ({ isActive }) => {
-    return <DropDownMenuArrowStyled>{isActive ? <ArrowDownSvg /> : <ArrowDownSvg />}</DropDownMenuArrowStyled>;
+    return (
+        <DropDownMenuArrowStyled isActive={isActive}>
+            <ArrowIcon />
+        </DropDownMenuArrowStyled>
+    );
 };
 
 const DropDownMenuHeaderMain = styled.button`
@@ -40,24 +47,34 @@ const DropDownMenuHeaderMain = styled.button`
     cursor: pointer;
 `;
 
-const DropDownMenuHeader = ({ title }) => (
-    <DropDownMenuHeaderMain>
+const DropDownMenuHeader = ({ title, onClick, isActive }) => (
+    <DropDownMenuHeaderMain onClick={onClick}>
         <FlexRow margin={'4px 0px'} alignItems={'center'}>
-            <DropDownMenuHeaderArrow isActive />
+            <DropDownMenuHeaderArrow isActive={isActive} />
             <DropDownMenuHeaderTitle>{title}</DropDownMenuHeaderTitle>
         </FlexRow>
     </DropDownMenuHeaderMain>
 );
 
 export const DropDownMenu = ({ title, options }) => {
+    const [isActive, setIsActive] = useState(true);
+
     return (
         <FlexCol>
-            <DropDownMenuHeader title={title} />
-            <FlexCol>
-                {options.map((option) => (
-                    <DropDownMenuHeaderItem key={option.id}>{option.title}</DropDownMenuHeaderItem>
-                ))}
-            </FlexCol>
+            <DropDownMenuHeader
+                title={title}
+                onClick={() => {
+                    setIsActive(!isActive);
+                }}
+                isActive={isActive}
+            />
+            {isActive ? (
+                <FlexCol>
+                    {options.map((option) => (
+                        <DropDownMenuHeaderItem key={option.id}>{option.title}</DropDownMenuHeaderItem>
+                    ))}
+                </FlexCol>
+            ) : null}
         </FlexCol>
     );
 };

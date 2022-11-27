@@ -1,3 +1,4 @@
+import { ReactSVG } from 'react-svg';
 import styled from 'styled-components';
 import { AppColors } from '../../constants';
 
@@ -19,12 +20,9 @@ const ToolTabStyled = styled.button`
 
 //TODO: It would be better not to use bg image, but use SVG parser
 const ToolTabIcon = styled.div`
-    background-image: ${(props) => `url(${props.src})`};
     margin: 0px 15px 0px 10px;
-    background-repeat: no-repeat;
     height: 21px;
     width: 21px;
-    background-size: contain;
 `;
 
 const ToolTabIndicator = styled.div`
@@ -40,7 +38,9 @@ const ToolTabIndicator = styled.div`
 export const ToolTab = ({ isActive, toolData }) => (
     <ToolTabStyled isActive={isActive}>
         {isActive ? <ToolTabIndicator /> : null}
-        <ToolTabIcon src={toolData.icon} />
+        <ToolTabIcon>
+            <ReactSVG src={toolData.icon} />
+        </ToolTabIcon>
         <ToolTabTitle isActive={isActive}> {toolData.title}</ToolTabTitle>
     </ToolTabStyled>
 );
