@@ -1,16 +1,15 @@
 import styled from 'styled-components';
-import { AppColors } from '../../constants';
 import { FlexRow } from '../common/flex';
 import { ProfilePhoto } from '../profile/ProfilePhoto';
 
 const SideBarWorkSpaceTabStyled = styled(FlexRow)`
-    background-color: ${AppColors.theme.backgorund.highlight};
+    background-color: ${(props) => props.theme.backgorund.highlight};
     height: 34px;
     padding-left: 16px;
     align-items: center;
     font-size: 14px;
     font-weight: 400;
-    color: ${AppColors.theme.text.light};
+    color: ${(props) => props.theme.text.light};
     margin-bottom: 17px;
 `;
 

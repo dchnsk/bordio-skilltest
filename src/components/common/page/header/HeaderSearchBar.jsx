@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import { AppColors } from '../../../../constants';
 import { SearchInputStyled } from '../../../search/SearchInput';
 
 const SideBarSearchStyled = styled(SearchInputStyled)`
-    background-color: ${AppColors.theme.backgorund.dark};
-    border-radius: 50px;
     width: 180px;
     height: 100%;
+    background-color: ${(props) => props.theme.backgorund.dark};
+    color: ${(props) => props.theme.text.dark};
+    border-radius: 50px;
     font-size: 14px;
-    color: ${AppColors.theme.text.dark};
     border: none;
 `;
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AppColors } from '../../../constants';
+import { AppTheme } from '../../../styles/appTheme';
 
 const KanbanRowDeadline = styled.span`
     opacity: 85%;
@@ -16,7 +16,7 @@ const KanbanRowStyled = styled.button`
     flex-direction: column;
     cursor: pointer;
     text-align: start;
-    color: ${AppColors.theme.text.dark};
+    color: ${(props) => props.theme.text.dark};
     padding: 15px;
     background-color: ${(props) => props?.bgColor};
     min-width: 270px;
@@ -26,7 +26,7 @@ const KanbanRowStyled = styled.button`
 `;
 
 export const KanbanRow = ({ data, isCompleted = false }) => (
-    <KanbanRowStyled bgColor={!isCompleted ? '#ABE9CE' : AppColors.theme.backgorund.dark}>
+    <KanbanRowStyled bgColor={!isCompleted ? '#ABE9CE' : AppTheme.backgorund.dark}>
         <KanbanRowTitle style={isCompleted ? { textDecoration: 'line-through' } : {}}>{data.title}</KanbanRowTitle>
         <KanbanRowDeadline>{data.deadline}</KanbanRowDeadline>
     </KanbanRowStyled>

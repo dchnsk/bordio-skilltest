@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { AppColors } from '../../constants';
 import { FlexCol } from '../common/flex';
 import { ToolTab } from './ToolTab';
 
@@ -9,7 +8,7 @@ const ToolsListStyled = styled(FlexCol)`
     width: 154px;
     top: 0;
     bottom: 0;
-    background-color: ${AppColors.theme.backgorund.dark};
+    background-color: ${(props) => props.theme.backgorund.dark};
 `;
 
 const ToolsListHeader = styled.span`

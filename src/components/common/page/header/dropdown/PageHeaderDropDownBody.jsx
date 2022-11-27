@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { AppColors } from '../../../../../constants';
 import { FlexCol } from '../../../flex';
 
 const PageHeaderDropDownBodyElement = styled.button`
@@ -27,7 +26,7 @@ const PageHeaderDropDownBodyStyled = styled(FlexCol)`
     white-space: nowrap;
     width: 100%;
     padding: 6px;
-    background-color: ${AppColors.theme.backgorund.light};
+    background-color: ${(props) => props.theme.backgorund.light};
     box-shadow: rgb(67 90 111 / 30%) 0px 0px 1px, rgb(67 90 111 / 47%) 0px 8px 10px -4px;
 `;
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { AppColors } from '../../../../../constants';
 import { AppButton } from '../../../input/AppButton';
 import { ReactSVG } from 'react-svg';
 import { FlexCol } from '../../../flex';
@@ -8,16 +7,16 @@ import { useOuterClick } from '../../../../../utils/hooks/useOuterClick';
 import { PageHeaderDropDownBody } from './PageHeaderDropDownBody';
 
 const PageHeaderDropDownButtomStyled = styled(AppButton)`
-    background-color: ${AppColors.theme.backgorund.dark};
-    padding: 8px 20px;
+    width: 120px;
     height: 40px;
+    background-color: ${(props) => props.theme.backgorund.dark};
+    color: ${(props) => props.theme.text.dark};
+    padding: 8px 20px;
     font-size: 14px;
-    color: ${AppColors.theme.text.dark};
     display: flex;
     cursor: pointer;
     align-items: center;
     justify-content: space-around;
-    width: 120px;
 `;
 
 const PageHeaderDropDownStyled = styled(FlexCol)`

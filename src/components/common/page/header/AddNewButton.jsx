@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import { AppColors } from '../../../../constants';
 import { AppButton } from '../../input/AppButton';
 import { ReactSVG } from 'react-svg';
 
 const AddNewButtonStyled = styled(AppButton)`
-    background-color: ${AppColors.theme.active};
+    background-color: ${(props) => props.theme.active};
     padding: 8px 20px;
     height: 40px;
     font-size: 14px;
-    color: ${AppColors.theme.text.light};
+    color: ${(props) => props.theme.text.light};
     display: flex;
     cursor: pointer;
     align-items: center;

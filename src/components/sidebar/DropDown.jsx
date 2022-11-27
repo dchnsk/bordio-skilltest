@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import { FlexCol, FlexRow } from '../common/flex';
-import { AppColors } from '../../constants';
 import { Flex } from '../common/flex';
 import { useState } from 'react';
 
 const DropDownMenuHeaderTitle = styled.span`
-    color: ${AppColors.theme.text.light};
+    color: ${(props) => props.theme.text.light};
 `;
 
 const DropDownMenuHeaderItem = styled.button`
     max-width: 75%;
-    color: ${AppColors.theme.text.inactive};
+    color: ${(props) => props.theme.text.inactive};
     background: none;
     border: none;
     align-items: flex-start;

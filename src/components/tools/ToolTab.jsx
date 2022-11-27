@@ -1,9 +1,8 @@
 import { ReactSVG } from 'react-svg';
 import styled from 'styled-components';
-import { AppColors } from '../../constants';
 
 const ToolTabTitle = styled.span`
-    color: ${(props) => (props.isActive ? AppColors.theme.active : AppColors.theme.text.dark)};
+    color: ${(props) => (props.isActive ? props.theme.active : props.theme.text.dark)};
 `;
 
 const ToolTabStyled = styled.button`
@@ -15,7 +14,7 @@ const ToolTabStyled = styled.button`
     width: 100%;
     border-radius: 0.5rem;
     padding: 5px;
-    background-color: ${(props) => (props.isActive ? AppColors.theme.backgorund.light : 'transparent')};
+    background-color: ${(props) => (props.isActive ? props.theme.backgorund.light : 'transparent')};
 `;
 
 //TODO: It would be better not to use bg image, but use SVG parser
@@ -31,7 +30,7 @@ const ToolTabIndicator = styled.div`
     height: 100%;
     left: 0;
     border-radius: 0px 5px 5px 0px;
-    background-color: ${AppColors.theme.active};
+    background-color: ${(props) => props.theme.active};
     position: absolute;
 `;
 

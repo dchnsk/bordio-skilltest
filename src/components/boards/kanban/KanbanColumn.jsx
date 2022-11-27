@@ -1,17 +1,16 @@
 import styled from 'styled-components';
-import { AppColors } from '../../../constants';
 import { FlexCol, FlexRow } from '../../common/flex';
 import { KanbanRow } from './KanbanRow';
 
 const KanbanColumnRowsBlock = styled(FlexCol)`
     padding: 40px 20px;
-    border-top: 1px solid ${AppColors.theme.backgorund.dark};
-    border-right: 1px solid ${AppColors.theme.backgorund.dark};
+    border-top: 1px solid ${(props) => props.theme.backgorund.dark};
+    border-right: 1px solid ${(props) => props.theme.backgorund.dark};
 `;
 
 const KanbanColumnRowCounterStyled = styled.div`
-    color: ${AppColors.theme.text.dark};
-    background-color: ${AppColors.theme.backgorund.dark};
+    color: ${(props) => props.theme.text.dark};
+    background-color: ${(props) => props.theme.backgorund.dark};
     padding: 2px 9px;
     border-radius: 100px;
 `;
@@ -20,7 +19,7 @@ const KanbanColumnRowCounter = ({ amountOfRows }) => (
 );
 
 const KanbanColumnTitle = styled.span`
-    color: ${AppColors.theme.text.dark};
+    color: ${(props) => props.theme.text.dark};
     font-size: 14px;
     font-weight: 500;
     margin-right: 10px;
