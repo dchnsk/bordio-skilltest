@@ -1,4 +1,4 @@
-import { workSpaceData } from '../../constants';
+import { WorkSpaceData } from '../../constants';
 import { FlexCol } from '../common/flex';
 import { SideBarNavigator } from './SideBarNavigator';
 import { SideBarWorkSpaceTab } from './SideBarWorkSpaceTab';
@@ -28,7 +28,7 @@ export const SideBarBody = () => {
 
     return (
         <FlexCol>
-            <SideBarWorkSpaceTab workSpaceData={workSpaceData} />
+            <SideBarWorkSpaceTab workSpaceData={WorkSpaceData} />
             <SideBarNavigator sections={availibleSections} />
         </FlexCol>
     );

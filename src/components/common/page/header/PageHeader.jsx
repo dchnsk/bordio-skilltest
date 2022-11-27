@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { workSpaceData } from '../../../../constants';
+import { WorkSpaceData } from '../../../../constants';
 import { FlexRow } from '../../flex';
 import { PageHeaderMain } from './PageHeaderMain';
 import { PageHeaderSecondary } from './PageHeaderSecondary';
@@ -18,7 +18,7 @@ export const PageHeader = () => {
     return (
         <PageHeaderStyled>
             <PageHeaderMain />
-            <PageHeaderSecondary workSpaceData={workSpaceData} />
+            <PageHeaderSecondary workSpaceData={WorkSpaceData} />
         </PageHeaderStyled>
     );
 };
