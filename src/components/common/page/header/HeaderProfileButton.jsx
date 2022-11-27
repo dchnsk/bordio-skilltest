@@ -1,4 +1,4 @@
-import { ProfilePhoto } from '../../profile/ProfilePhoto';
+import { ProfilePhoto } from '../../../profile/ProfilePhoto';
 import styled from 'styled-components';
 import { workSpaceData } from '../../../../constants';
 

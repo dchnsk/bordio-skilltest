@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { workSpaceData } from '../../../../constants';
-import { FlexRow } from '../../flex/FlexRow';
+import { FlexRow } from '../../flex';
 import { PageHeaderMain } from './PageHeaderMain';
 import { PageHeaderSecondary } from './PageHeaderSecondary';
 

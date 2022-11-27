@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FlexCol } from '../common/flex';
-import { Logo } from '../symbolic/logo/logo';
+import { Logo } from '../symbolic/logo';
 import { SideBarSearch } from './SideBarSearch';
 
 const SideBarHeaderStyled = styled(FlexCol)`

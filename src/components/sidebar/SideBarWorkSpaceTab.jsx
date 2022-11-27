@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { AppColors } from '../../constants';
 import { FlexRow } from '../common/flex';
-import { ProfilePhoto } from '../common/profile/ProfilePhoto';
+import { ProfilePhoto } from '../profile/ProfilePhoto';
 
 const SideBarWorkSpaceTabStyled = styled(FlexRow)`
     background-color: ${AppColors.theme.backgorund.highlight};
