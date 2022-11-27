@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { SearchInputStyled } from '../../../search/SearchInput';
+import { SearchInput } from '../../../search/SearchInput';
 
-const SideBarSearchStyled = styled(SearchInputStyled)`
+const SideBarSearchStyled = styled(SearchInput)`
     width: 180px;
     height: 100%;
     padding: 12px 30px 12px 16px;
@@ -13,5 +13,5 @@ const SideBarSearchStyled = styled(SearchInputStyled)`
 `;
 
 export const HeaderSearchBar = () => {
-    return <SideBarSearchStyled placeholder="Search..." />;
+    return <SideBarSearchStyled />;
 };
