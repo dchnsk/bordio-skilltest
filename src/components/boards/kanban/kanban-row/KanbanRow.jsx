@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { AppTheme } from '../../../styles/appTheme';
+import PropTypes from 'prop-types';
+import { AppTheme } from '../../../../styles/appTheme';
 
 const KanbanRowDeadline = styled.span`
     opacity: 85%;
@@ -31,3 +32,7 @@ export const KanbanRow = ({ data, isCompleted = false }) => (
         <KanbanRowDeadline>{data.deadline}</KanbanRowDeadline>
     </KanbanRowStyled>
 );
+KanbanRow.propTypes = {
+    data: PropTypes.object.isRequired,
+    isCompleted: PropTypes.bool,
+};

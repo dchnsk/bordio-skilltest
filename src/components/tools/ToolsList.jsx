@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { FlexCol } from '../common/flex';
 import { ToolTab } from './ToolTab';
 
@@ -32,4 +33,7 @@ export const ToolsList = ({ availibleTools }) => {
             </ToolsListBodyStyled>
         </ToolsListStyled>
     );
+};
+ToolsList.propTypes = {
+    availibleTools: PropTypes.array.isRequired,
 };

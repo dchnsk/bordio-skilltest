@@ -1,4 +1,5 @@
 import { ReactSVG } from 'react-svg';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ToolTabTitle = styled.span`
@@ -17,7 +18,6 @@ const ToolTabStyled = styled.button`
     background-color: ${(props) => (props.isActive ? props.theme.backgorund.light : 'transparent')};
 `;
 
-//TODO: It would be better not to use bg image, but use SVG parser
 const ToolTabIcon = styled.div`
     margin: 0px 15px 0px 10px;
     height: 21px;
@@ -43,3 +43,8 @@ export const ToolTab = ({ isActive, toolData }) => (
         <ToolTabTitle isActive={isActive}> {toolData.title}</ToolTabTitle>
     </ToolTabStyled>
 );
+
+ToolTab.propTypes = {
+    isActive: PropTypes.bool,
+    toolData: PropTypes.object.isRequired,
+};

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { KanbanBoardData } from '../../../constants';
 import { FlexRow } from '../../common/flex';
 import { CreateKanBanColumn } from './create-kanban-column';
-import { KanbanColumn } from './KanbanColumn';
+import { KanbanColumn } from './kanban-column';
 
 const KanBanBoardStyled = styled(FlexRow)`
     height: 100%;

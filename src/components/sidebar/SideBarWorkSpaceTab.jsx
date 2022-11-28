@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { FlexRow } from '../common/flex';
 import { ProfilePhoto } from '../profile/ProfilePhoto';
 
@@ -26,4 +27,7 @@ export const SideBarWorkSpaceTab = ({ workSpaceData }) => {
             <span>My workspace</span>
         </SideBarWorkSpaceTabStyled>
     );
+};
+SideBarWorkSpaceTab.propTypes = {
+    workSpaceData: PropTypes.object.isRequired,
 };

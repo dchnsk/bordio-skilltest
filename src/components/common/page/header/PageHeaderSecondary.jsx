@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { FlexRow } from '../../flex';
 import { NotificationButton } from '../../../notifications/NotificationButton';
 import { HeaderProfileButton } from './HeaderProfileButton';
@@ -17,3 +18,7 @@ export const PageHeaderSecondary = ({ workSpaceData }) => (
         <HeaderProfileButton />
     </PageHeaderSecondaryStyled>
 );
+
+PageHeaderSecondary.propTypes = {
+    workSpaceData: PropTypes.object.isRequired,
+};

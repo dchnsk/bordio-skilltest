@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropsTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
 import { FlexCol, FlexRow } from '../common/flex';
 import { Flex } from '../common/flex';
@@ -77,4 +78,9 @@ export const DropDownMenu = ({ title, options }) => {
             ) : null}
         </FlexCol>
     );
+};
+
+DropDownMenu.ropsTypes = {
+    title: PropsTypes.string.isRequired,
+    options: PropsTypes.array.isRequired,
 };
