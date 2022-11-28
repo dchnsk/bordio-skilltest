@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 import { FlexCol } from '../common/flex';
-import { DropDownMenu } from './DropDown';
+import { SidebarDropDown } from './sidebar-dropdown';
 
-const SideBarNavigatorStyled = styled(FlexCol)`
+const SidebarNavigatorStyled = styled(FlexCol)`
     padding-left: 16px;
 `;
 
-export const SideBarNavigator = ({ sections }) => {
+export const SidebarNavigator = ({ sections }) => {
     return (
-        <SideBarNavigatorStyled>
+        <SidebarNavigatorStyled>
             {sections.map((section) => (
-                <DropDownMenu key={section.id} title={section.title} options={section.options} />
+                <SidebarDropDown key={section.id} title={section.title} options={section.options} />
             ))}
-        </SideBarNavigatorStyled>
+        </SidebarNavigatorStyled>
     );
 };

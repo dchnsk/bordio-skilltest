@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FlexRow } from '../common/flex';
 import { ProfilePhoto } from '../profile/ProfilePhoto';
 
-const SideBarWorkSpaceTabStyled = styled(FlexRow)`
+const SidebarWorkSpaceTabStyled = styled(FlexRow)`
     background-color: ${(props) => props.theme.backgorund.highlight};
     height: 34px;
     padding-left: 16px;
@@ -14,9 +14,9 @@ const SideBarWorkSpaceTabStyled = styled(FlexRow)`
     margin-bottom: 17px;
 `;
 
-export const SideBarWorkSpaceTab = ({ workSpaceData }) => {
+export const SidebarWorkSpaceTab = ({ workSpaceData }) => {
     return (
-        <SideBarWorkSpaceTabStyled>
+        <SidebarWorkSpaceTabStyled>
             <ProfilePhoto
                 src={workSpaceData.profile.img}
                 alt={workSpaceData.profile.name}
@@ -25,9 +25,9 @@ export const SideBarWorkSpaceTab = ({ workSpaceData }) => {
                 style={{ marginRight: '8px' }}
             />
             <span>My workspace</span>
-        </SideBarWorkSpaceTabStyled>
+        </SidebarWorkSpaceTabStyled>
     );
 };
-SideBarWorkSpaceTab.propTypes = {
+SidebarWorkSpaceTab.propTypes = {
     workSpaceData: PropTypes.object.isRequired,
 };

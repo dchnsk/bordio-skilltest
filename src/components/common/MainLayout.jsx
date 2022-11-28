@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ImagePaths } from '../../constants';
-import { SideBar } from '../sidebar';
+import { Sidebar } from '../sidebar';
 import { ToolsList } from '../tools/ToolsList';
 import { FlexRow } from './flex';
 
@@ -19,7 +19,7 @@ export const MainLayout = ({ children }) => {
 
     return (
         <FlexRow minHeight="100vh">
-            <SideBar />
+            <Sidebar />
             <ToolsList availibleTools={tools} />
             {children}
         </FlexRow>

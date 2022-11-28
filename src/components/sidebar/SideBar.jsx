@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SideBarHeader } from './SideBarHeader';
-import { SideBarBody } from './SideBarBody';
+import { SidebarHeader } from './SidebarHeader';
+import { SidebarBody } from './SidebarBody';
 import { FlexCol } from '../common/flex';
 
-const SideBarStyled = styled(FlexCol)`
+const SidebarStyled = styled(FlexCol)`
     background-color: ${(props) => props.theme.backgorund.primary};
     max-width: 219px;
     height: 100%;
@@ -14,11 +14,11 @@ const SideBarStyled = styled(FlexCol)`
     position: fixed;
 `;
 
-export const SideBar = () => {
+export const Sidebar = () => {
     return (
-        <SideBarStyled>
-            <SideBarHeader />
-            <SideBarBody />
-        </SideBarStyled>
+        <SidebarStyled>
+            <SidebarHeader />
+            <SidebarBody />
+        </SidebarStyled>
     );
 };
